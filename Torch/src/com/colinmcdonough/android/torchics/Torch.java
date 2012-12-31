@@ -191,6 +191,7 @@ public class Torch extends Activity implements SurfaceHolder.Callback {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.i(TAG, "onCreate");
 		setContentView(R.layout.main);
 		button = findViewById(R.id.button);
 		surfaceView = (SurfaceView) this.findViewById(R.id.surfaceview);
@@ -198,7 +199,6 @@ public class Torch extends Activity implements SurfaceHolder.Callback {
 		surfaceHolder.addCallback(this);
 		surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 		disablePhoneSleep();
-		Log.i(TAG, "onCreate");
 	}
 
 	private void disablePhoneSleep() {
